@@ -2,6 +2,19 @@
 .sheet-switch-pc-show:not(:checked)~.sheet-switch-pc {display:none;}
 .sheet-switch-npc-show:not(:checked)~.sheet-switch-npc {display:none;}
 
+table .sheet-npc-deprecated {
+	border-style: dotted;
+	border-width: 1px;
+	background-color: lightgray;
+}
+.sheet-npc-deprecated-show:not(:checked)~table .sheet-npc-deprecated {
+	display:none;
+}
+
+.sheet-npc-init-notes-show:not(:checked)~.sheet-npc-init-notes {
+	display:none;
+}
+
 .sheet-pc-spells-show:not(:checked)~.sheet-pc-spells {display:none;}
 .sheet-pc-charrpinfo-show:not(:checked)~.sheet-pc-charrpinfo {display:none;}
 .sheet-pc-combat-show:not(:checked)~.sheet-pc-combat {display:none;}
@@ -68,6 +81,13 @@
 .sheet-pc-notes4-show:not(:checked)~.sheet-pc-notes4 {display:none;}
 
 .sheet-pc-rolltemplates-show:not(:checked)~.sheet-pc-rolltemplates {display:none;}
+
+.sheet-deprecated {
+    display: inline-block;
+	border: 1px;
+	border-style: dotted;
+
+}
 
 .charsheet label {
     display: inline-block;
@@ -574,7 +594,7 @@ input, select {
 
 
 /* -----------------------   Roll Templates   ----------------------- */
-/* Attacks */
+/* -----------------------Attack checks----------------------- */
 .sheet-rolltemplate-DnD35Attack table>thead>tr>th,
 .sheet-rolltemplate-DnD35Attack table>tbody>tr>th,
 .sheet-rolltemplate-DnD35Attack table>tfoot>tr>th,
@@ -584,7 +604,6 @@ input, select {
     padding: 0px;
     border: none;
 }
-/* -----------------------Attacks----------------------- */
 .sheet-rolltemplate-DnD35Attack table {
 	width: 100%;
 	padding: 2px;
@@ -593,7 +612,7 @@ input, select {
 	background-color: #ffffff;        /* white background */
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Attack th {  /* Header for the attack template */
+.sheet-rolltemplate-DnD35Attack th {  /* Header for the attack template */
 	color: rgb(126, 45, 64);          /* reddish color */
 	padding-left: 5px;
 	line-height: 1.6em;          /* a little extra vertical spacing of the lines in the header to help the name/title stand out. */
@@ -602,43 +621,43 @@ input, select {
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 }
- .sheet-rolltemplate-DnD35Attack .sheet-header-attack {  /* Header for pcflag and npcflag */
+.sheet-rolltemplate-DnD35Attack .sheet-header-attack {  /* Header for pcflag and npcflag */
 	color: rgb(126, 45, 64);          /* reddish color */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Attack .sheet-header-initiative {  /* Header for initflag */
+.sheet-rolltemplate-DnD35Attack .sheet-header-initiative {  /* Header for initflag */
 	color: rgb(204, 153, 51);         /* golden color */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Attack .sheet-header-spell{  /* Header for spellflag */
+.sheet-rolltemplate-DnD35Attack .sheet-header-spell{  /* Header for spellflag */
 	color: rgb(45, 64, 126);          /* blue */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Attack .sheet-header-ability {  /* Header for abilityflag */
+.sheet-rolltemplate-DnD35Attack .sheet-header-ability {  /* Header for abilityflag */
 	color: rgb(204, 115, 51);         /* orangy brown color */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Attack .sheet-header-save {  /* Header for saveflag */
+.sheet-rolltemplate-DnD35Attack .sheet-header-save {  /* Header for saveflag */
 	color: rgb(153, 77, 153);         /* purple */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Attack .sheet-header-skill {  /* Header for skillflag */
+.sheet-rolltemplate-DnD35Attack .sheet-header-skill {  /* Header for skillflag */
 	color: rgb(64, 126, 45);          /* green */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Attack .sheet-header-skillcat{  /* Header for skillcatflag */
+.sheet-rolltemplate-DnD35Attack .sheet-header-skillcat{  /* Header for skillcatflag */
 	color: rgb(45, 126, 107);         /* teal color */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
@@ -650,18 +669,18 @@ input, select {
     text-align: center;
 	/*color: rgba(112,32,130,1);*/
 }
- .sheet-rolltemplate-DnD35Attack .sheet-subheader {  /* black text and italics for subtags and subtags2 */
+.sheet-rolltemplate-DnD35Attack .sheet-subheader {  /* black text and italics for subtags and subtags2 */
 	color: #000;   	                  /* black */
 	font-size: 1em;                   /* Make sure the subtags are normal-sized instead of large. */
 	font-style: italic;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Attack .sheet-arrow-right {  /* the divider for pcflag; a right pointing isoscelese triangle */
+.sheet-rolltemplate-DnD35Attack .sheet-arrow-right {  /* the divider for pcflag; a right pointing isoscelese triangle */
 	border-top: 3px solid transparent;
 	border-bottom: 3px solid transparent;
 	border-left: 180px solid rgb(126, 45, 64);          /* reddish color */
 }
- .sheet-rolltemplate-DnD35Attack .sheet-arrow-left {  /* the divider for npcflag; a left pointing isoscelese triangle */
+.sheet-rolltemplate-DnD35Attack .sheet-arrow-left {  /* the divider for npcflag; a left pointing isoscelese triangle */
 	border-top: 3px solid transparent;
 	border-bottom: 3px solid transparent;
 	border-right: 180px solid rgb(126, 45, 64);          /* reddish color */
@@ -714,30 +733,30 @@ input, select {
 .sheet-rolltemplate-DnD35Attack .sheet-dcolor {  /* color for the damage/crit damage area; ie the wording/rolls in {{damage1= something}} or {{critdmg1=something}}.  only found in the attack template   */
 	color: rgb(193, 80, 107);   /* paler reddish color*/
 }
- .sheet-rolltemplate-DnD35Attack td {
+.sheet-rolltemplate-DnD35Attack td {
 	padding-left: 5px;
 }
- .sheet-rolltemplate-DnD35Attack .sheet-tr-repeating:nth-child(even){
+.sheet-rolltemplate-DnD35Attack .sheet-tr-repeating:nth-child(even){
 	background-color: #eee;   /* pale grey color for background of alternating rows */
 }
- .sheet-rolltemplate-DnD35Attack .inlinerollresult {  /* inline roll background is transparent and it has no border */
+.sheet-rolltemplate-DnD35Attack .inlinerollresult {  /* inline roll background is transparent and it has no border */
 	background-color: transparent;
 	border: none;
 }
- .sheet-rolltemplate-DnD35Attack .inlinerollresult.fullcrit {
+.sheet-rolltemplate-DnD35Attack .inlinerollresult.fullcrit {
 	color: #3FB315;   /* strong green for crit results for the inline roll */
 	border: none;
 }
- .sheet-rolltemplate-DnD35Attack .inlinerollresult.fullfail {
+.sheet-rolltemplate-DnD35Attack .inlinerollresult.fullfail {
 	color: #B31515;   /* strong red for fumble results for the inline roll */
 	border: none;
 }
- .sheet-rolltemplate-DnD35Attack .inlinerollresult.importantroll {
+.sheet-rolltemplate-DnD35Attack .inlinerollresult.importantroll {
 	color: #4A57ED;   /* blue for mixed fumble/crit results for the inline roll */
 	border: none;
 }
 
-/* -----------------------std roll checks----------------------- */
+/* -----------------------StdRoll checks----------------------- */
 .sheet-rolltemplate-DnD35StdRoll table>thead>tr>th,
 .sheet-rolltemplate-DnD35StdRoll table>tbody>tr>th,
 .sheet-rolltemplate-DnD35StdRoll table>tfoot>tr>th,
@@ -756,7 +775,7 @@ input, select {
 	background-color: #ffffff;        /* white background */
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35StdRoll th {
+.sheet-rolltemplate-DnD35StdRoll th {
     /*color: rgb(45, 126, 107); */        /* teal color */
 	padding-left: 5px;
 	line-height: 1.6em;          /* a little extra vertical spacing of the lines in the header to help the name/title stand out. */
@@ -764,43 +783,43 @@ input, select {
 	text-align: left;
     /*text-align: center;*/
 }
- .sheet-rolltemplate-DnD35StdRoll .sheet-header-attack {  /* Header for pcflag and npcflag */
+.sheet-rolltemplate-DnD35StdRoll .sheet-header-attack {  /* Header for pcflag and npcflag */
 	color: rgb(126, 45, 64);          /* reddish color */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35StdRoll .sheet-header-initiative {  /* Header for initflag */
+.sheet-rolltemplate-DnD35StdRoll .sheet-header-initiative {  /* Header for initflag */
 	color: rgb(204, 153, 51);         /* golden color */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35StdRoll .sheet-header-spell{  /* Header for spellflag */
+.sheet-rolltemplate-DnD35StdRoll .sheet-header-spell{  /* Header for spellflag */
 	color: rgb(45, 64, 126);          /* blue */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35StdRoll .sheet-header-ability {  /* Header for abilityflag */
+.sheet-rolltemplate-DnD35StdRoll .sheet-header-ability {  /* Header for abilityflag */
 	color: rgb(204, 115, 51);         /* orangy brown color */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35StdRoll .sheet-header-save {  /* Header for saveflag */
+.sheet-rolltemplate-DnD35StdRoll .sheet-header-save {  /* Header for saveflag */
 	color: rgb(153, 77, 153);         /* purple */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35StdRoll .sheet-header-skill {  /* Header for skillflag */
+.sheet-rolltemplate-DnD35StdRoll .sheet-header-skill {  /* Header for skillflag */
 	color: rgb(64, 126, 45);          /* green */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35StdRoll .sheet-header-skillcat{  /* Header for skillcatflag */
+.sheet-rolltemplate-DnD35StdRoll .sheet-header-skillcat{  /* Header for skillcatflag */
 	color: rgb(45, 126, 107);         /* teal color */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
@@ -812,18 +831,18 @@ input, select {
     text-align: center;
 	/*color: rgba(112,32,130,1);*/
 }
- .sheet-rolltemplate-DnD35StdRoll .sheet-subheader {  /* black text and italics for subtags and subtags2 */
+.sheet-rolltemplate-DnD35StdRoll .sheet-subheader {  /* black text and italics for subtags and subtags2 */
 	color: #000;   	                  /* black */
 	font-size: 1em;                   /* Make sure the subtags are normal-sized instead of large. */
 	font-style: italic;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35StdRoll .sheet-arrow-right {  /* the divider for pcflag; a right pointing isoscelese triangle */
+.sheet-rolltemplate-DnD35StdRoll .sheet-arrow-right {  /* the divider for pcflag; a right pointing isoscelese triangle */
 	border-top: 3px solid transparent;
 	border-bottom: 3px solid transparent;
 	border-left: 180px solid rgb(126, 45, 64);          /* reddish color */
 }
- .sheet-rolltemplate-DnD35StdRoll .sheet-arrow-left {  /* the divider for npcflag; a left pointing isoscelese triangle */
+.sheet-rolltemplate-DnD35StdRoll .sheet-arrow-left {  /* the divider for npcflag; a left pointing isoscelese triangle */
 	border-top: 3px solid transparent;
 	border-bottom: 3px solid transparent;
 	border-right: 180px solid rgb(126, 45, 64);          /* reddish color */
@@ -867,31 +886,31 @@ input, select {
 .sheet-rolltemplate-DnD35StdRoll .sheet-tcat {  /* italics */
 font-style: italic;
 }
- .sheet-rolltemplate-DnD35StdRoll td {
+.sheet-rolltemplate-DnD35StdRoll td {
 	padding-left: 5px;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35StdRoll .sheet-tr-repeating:nth-child(even){
+.sheet-rolltemplate-DnD35StdRoll .sheet-tr-repeating:nth-child(even){
 	background-color:#eee;   /* pale grey color for background of alternating rows */
 }
- .sheet-rolltemplate-DnD35StdRoll .inlinerollresult {  /* inline roll background is transparent and it has no border */
+.sheet-rolltemplate-DnD35StdRoll .inlinerollresult {  /* inline roll background is transparent and it has no border */
 	background-color: transparent;
 	border: none;
 }
- .sheet-rolltemplate-DnD35StdRoll .inlinerollresult.fullcrit {
+.sheet-rolltemplate-DnD35StdRoll .inlinerollresult.fullcrit {
 	color: #3FB315;   /* strong green for crit results for the inline roll */
 	border: none;
 }
- .sheet-rolltemplate-DnD35StdRoll .inlinerollresult.fullfail {
+.sheet-rolltemplate-DnD35StdRoll .inlinerollresult.fullfail {
 	color: #B31515;   /* strong red for fumble results for the inline roll */
 	border: none;
 }
- .sheet-rolltemplate-DnD35StdRoll .inlinerollresult.importantroll {
+.sheet-rolltemplate-DnD35StdRoll .inlinerollresult.importantroll {
 	color: #4A57ED;   /* blue for mixed fumble/crit results for the inline roll */
 	border: none;
 }
 
-/* -----------------------initiative checks----------------------- */
+/* -----------------------Initiative checks----------------------- */
 .sheet-rolltemplate-DnD35Initiative table>thead>tr>th,
 .sheet-rolltemplate-DnD35Initiative table>tbody>tr>th,
 .sheet-rolltemplate-DnD35Initiative table>tfoot>tr>th,
@@ -909,7 +928,7 @@ font-style: italic;
 	margin: 0;
 	background-color: #ffffff;        /* white background */
 }
- .sheet-rolltemplate-DnD35Initiative th {
+.sheet-rolltemplate-DnD35Initiative th {
 	color: rgb(204, 153, 51);         /* golden color */
 	padding-left: 5px;
 	/*line-height: 1.6em; */      /* a little extra vertical spacing of the lines in the header to help the name/title stand out. */
@@ -918,43 +937,43 @@ font-style: italic;
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 }
- .sheet-rolltemplate-DnD35Initiative .sheet-header-attack {  /* Header for pcflag and npcflag */
+.sheet-rolltemplate-DnD35Initiative .sheet-header-attack {  /* Header for pcflag and npcflag */
 	color: rgb(126, 45, 64);          /* reddish color */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Initiative .sheet-header-initiative {  /* Header for initflag */
+.sheet-rolltemplate-DnD35Initiative .sheet-header-initiative {  /* Header for initflag */
 	color: rgb(204, 153, 51);         /* golden color */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Initiative .sheet-header-spell{  /* Header for spellflag */
+.sheet-rolltemplate-DnD35Initiative .sheet-header-spell{  /* Header for spellflag */
 	color: rgb(45, 64, 126);          /* blue */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Initiative .sheet-header-ability {  /* Header for abilityflag */
+.sheet-rolltemplate-DnD35Initiative .sheet-header-ability {  /* Header for abilityflag */
 	color: rgb(204, 115, 51);         /* orangy brown color */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Initiative .sheet-header-save {  /* Header for saveflag */
+.sheet-rolltemplate-DnD35Initiative .sheet-header-save {  /* Header for saveflag */
 	color: rgb(153, 77, 153);         /* purple */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Initiative .sheet-header-skill {  /* Header for skillflag */
+.sheet-rolltemplate-DnD35Initiative .sheet-header-skill {  /* Header for skillflag */
 	color: rgb(64, 126, 45);          /* green */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Initiative .sheet-header-skillcat{  /* Header for skillcatflag */
+.sheet-rolltemplate-DnD35Initiative .sheet-header-skillcat{  /* Header for skillcatflag */
 	color: rgb(45, 126, 107);         /* teal color */
 	font-family: "Arial", Helvetica, sans-serif;
 	font-variant: small-caps;
@@ -966,18 +985,18 @@ font-style: italic;
     text-align: center;
 	/*color: rgba(112,32,130,1);*/
 }
- .sheet-rolltemplate-DnD35Initiative .sheet-subheader {  /* black text and italics for subtags and subtags2 */
+.sheet-rolltemplate-DnD35Initiative .sheet-subheader {  /* black text and italics for subtags and subtags2 */
 	color: #000;   	                  /* black */
 	font-size: 1em;                   /* Make sure the subtags are normal-sized instead of large. */
 	font-style: italic;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Initiative .sheet-arrow-right {  /* the divider for pcflag; a right pointing isoscelese triangle */
+.sheet-rolltemplate-DnD35Initiative .sheet-arrow-right {  /* the divider for pcflag; a right pointing isoscelese triangle */
 	border-top: 3px solid transparent;
 	border-bottom: 3px solid transparent;
 	border-left: 180px solid rgb(126, 45, 64);          /* reddish color */
 }
- .sheet-rolltemplate-DnD35Initiative .sheet-arrow-left {  /* the divider for npcflag; a left pointing isoscelese triangle */
+.sheet-rolltemplate-DnD35Initiative .sheet-arrow-left {  /* the divider for npcflag; a left pointing isoscelese triangle */
 	border-top: 3px solid transparent;
 	border-bottom: 3px solid transparent;
 	border-right: 180px solid rgb(126, 45, 64);          /* reddish color */
@@ -1018,26 +1037,26 @@ font-style: italic;
 	border-left: 90px solid rgb(204, 153, 51);         /* golden color */
 	border-right: 90px solid rgb(204, 153, 51);         /* golden color */
 }
- .sheet-rolltemplate-DnD35Initiative .sheet-tcat {  /* italics */
+.sheet-rolltemplate-DnD35Initiative .sheet-tcat {  /* italics */
 	font-style: italic;
 	text-align: left;
 }
- .sheet-rolltemplate-DnD35Initiative td {
+.sheet-rolltemplate-DnD35Initiative td {
 	padding-left: 5px;
 }
- .sheet-rolltemplate-DnD35Initiative .inlinerollresult {  /* inline roll background is transparent and it has no border */
+.sheet-rolltemplate-DnD35Initiative .inlinerollresult {  /* inline roll background is transparent and it has no border */
 	background-color: transparent;
 	border: none;
 }
- .sheet-rolltemplate-DnD35Initiative .inlinerollresult.fullcrit {
+.sheet-rolltemplate-DnD35Initiative .inlinerollresult.fullcrit {
 	color: #3FB315;   /* strong green for crit results for the inline roll */
 	border: none;
 }
- .sheet-rolltemplate-DnD35Initiative .inlinerollresult.fullfail {
+.sheet-rolltemplate-DnD35Initiative .inlinerollresult.fullfail {
 	color: #B31515;   /* strong red for fumble results for the inline roll */
 	border: none;
 }
- .sheet-rolltemplate-DnD35Initiative .inlinerollresult.importantroll {
+.sheet-rolltemplate-DnD35Initiative .inlinerollresult.importantroll {
 	color: #4A57ED;   /* blue for mixed fumble/crit results for the inline roll */
 	border: none;
 }
