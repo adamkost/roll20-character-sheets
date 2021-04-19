@@ -3637,217 +3637,6 @@
 			</td>
 		</tr>
 		<tr>
-			<td colspan="2" class="sheet-table-left">
-				<input type="checkbox" class="sheet-pc-weapons-show sheet-arrow" title="weapons-show" name="attr_weapons-show" value="1" checked /><span style="text-align: left;">Attack Helpers</span>
-				<div class="sheet-pc-weapons">
-					<table>
-						<!--Attack 1-->
-						<tr>
-							<td style="text-align: left;">
-								<input type="checkbox" class="sheet-pc-weapon1-show sheet-arrow" title="weapon1-show" name="attr_weapon1-show" value="0"         /><span style="text-align: left;">Attack 1</span>
-								<div class="sheet-pc-weapon1">
-									<table>
-										<tr>
-											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack1type"    title="npcattack1type"    value="1"                        ></td>
-											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack1macro" name="attr_npcattack1macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack1attack} }}  {{attack1=@{npcattack1type}: @{npcattack1attack} }} {{damage1=D: @{npcattack1damage} }} {{critconfirm1=Crit?: @{npcattack1critatk} }} {{critdmg1= @{npcattack1critdam} }} {{notes=@{npcattack1note} }}</textarea>
-											<button type="roll" style="vertical-align:top;" name="roll_npcattack1" title="npcattack1macro" value="@{npcattack1macro}"></button></td>
-										</tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack1attack"  title="npcattack1attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack1damage"  title="npcattack1damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack1critatk" title="npcattack1critatk" value="@{npcattack1attack}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack1critdam" title="npcattack1critdam" value="@{npcattack1damage}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack1note"    title="npcattack1note"                                     ></td></tr>
-									</table>
-								</div>
-							</td>
-						</tr>
-						<!--Attack 2-->
-						<tr>
-							<td style="text-align: left;">
-								<input type="checkbox" class="sheet-pc-weapon2-show sheet-arrow" title="weapon2-show" name="attr_weapon2-show" value="0"         /><span style="text-align: left;">Attack 2</span>
-								<div class="sheet-pc-weapon2">
-									<table>
-										<tr>
-											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack2type"    title="npcattack2type"    value="2"                        ></td>
-											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack2macro" name="attr_npcattack2macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack2attack} }}  {{attack1=@{npcattack2type}: @{npcattack2attack} }} {{damage1=D: @{npcattack2damage} }} {{critconfirm1=Crit?: @{npcattack2critatk} }} {{critdmg1= @{npcattack2critdam} }} {{notes=@{npcattack2note} }}</textarea>
-											<button type="roll" style="vertical-align:top;" name="roll_npcattack2" title="npcattack2macro" value="@{npcattack2macro}"></button></td>
-										</tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack2attack"  title="npcattack2attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack2damage"  title="npcattack2damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack2critatk" title="npcattack2critatk" value="@{npcattack2attack}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack2critdam" title="npcattack2critdam" value="@{npcattack2damage}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack2note"    title="npcattack2note"                                     ></td></tr>
-									</table>
-								</div>
-							</td>
-						</tr>
-						<!--Attack 3-->
-						<tr>
-							<td style="text-align: left;">
-								<input type="checkbox" class="sheet-pc-weapon3-show sheet-arrow" title="weapon3-show" name="attr_weapon3-show" value="0"         /><span style="text-align: left;">Attack 3</span>
-								<div class="sheet-pc-weapon3">
-									<table>
-										<tr>
-											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack3type"    title="npcattack3type"    value="3"                        ></td>
-											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack3macro" name="attr_npcattack3macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack3attack} }}  {{attack1=@{npcattack3type}: @{npcattack3attack} }} {{damage1=D: @{npcattack3damage} }} {{critconfirm1=Crit?: @{npcattack3critatk} }} {{critdmg1= @{npcattack3critdam} }} {{notes=@{npcattack3note} }}</textarea>
-											<button type="roll" style="vertical-align:top;" name="roll_npcattack3" title="npcattack3macro" value="@{npcattack3macro}"></button></td>
-										</tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack3attack"  title="npcattack3attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack3damage"  title="npcattack3damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack3critatk" title="npcattack3critatk" value="@{npcattack3attack}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack3critdam" title="npcattack3critdam" value="@{npcattack3damage}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack3note"    title="npcattack3note"                                     ></td></tr>
-									</table>
-								</div>
-							</td>
-						</tr>
-						<!--Attack 4-->
-						<tr>
-							<td style="text-align: left;">
-								<input type="checkbox" class="sheet-pc-weapon4-show sheet-arrow" title="weapon4-show" name="attr_weapon4-show" value="0"         /><span style="text-align: left;">Attack 4</span>
-								<div class="sheet-pc-weapon4">
-									<table>
-										<tr>
-											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack4type"    title="npcattack4type"    value="4"                        ></td>
-											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack4macro" name="attr_npcattack4macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack4attack} }}  {{attack1=@{npcattack4type}: @{npcattack4attack} }} {{damage1=D: @{npcattack4damage} }} {{critconfirm1=Crit?: @{npcattack4critatk} }} {{critdmg1= @{npcattack4critdam} }} {{notes=@{npcattack4note} }}</textarea>
-											<button type="roll" style="vertical-align:top;" name="roll_npcattack4" title="npcattack4macro" value="@{npcattack4macro}"></button></td>
-										</tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack4attack"  title="npcattack4attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack4damage"  title="npcattack4damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack4critatk" title="npcattack4critatk" value="@{npcattack4attack}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack4critdam" title="npcattack4critdam" value="@{npcattack4damage}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack4note"    title="npcattack4note"                                     ></td></tr>
-									</table>
-								</div>
-							</td>
-						</tr>
-						<!--Attack 5-->
-						<tr>
-							<td style="text-align: left;">
-								<input type="checkbox" class="sheet-pc-weapon5-show sheet-arrow" title="weapon5-show" name="attr_weapon5-show" value="0"         /><span style="text-align: left;">Attack 5</span>
-								<div class="sheet-pc-weapon5">
-									<table>
-										<tr>
-											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack5type"    title="npcattack5type"    value="5"                        ></td>
-											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack5macro" name="attr_npcattack5macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack5attack} }}  {{attack1=@{npcattack5type}: @{npcattack5attack} }} {{damage1=D: @{npcattack5damage} }} {{critconfirm1=Crit?: @{npcattack5critatk} }} {{critdmg1= @{npcattack5critdam} }} {{notes=@{npcattack5note} }}</textarea>
-											<button type="roll" style="vertical-align:top;" name="roll_npcattack5" title="npcattack5macro" value="@{npcattack5macro}"></button></td>
-										</tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack5attack"  title="npcattack5attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack5damage"  title="npcattack5damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack5critatk" title="npcattack5critatk" value="@{npcattack5attack}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack5critdam" title="npcattack5critdam" value="@{npcattack5damage}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack5note"    title="npcattack5note"                                     ></td></tr>
-									</table>
-								</div>
-							</td>
-						</tr>
-						<!--Attack 6-->
-						<tr>
-							<td style="text-align: left;">
-								<input type="checkbox" class="sheet-pc-weapon6-show sheet-arrow" title="weapon6-show" name="attr_weapon6-show" value="0"         /><span style="text-align: left;">Attack 6</span>
-								<div class="sheet-pc-weapon6">
-									<table>
-										<tr>
-											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack6type"    title="npcattack6type"    value="6"                        ></td>
-											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack6macro" name="attr_npcattack6macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack6attack} }}  {{attack1=@{npcattack6type}: @{npcattack6attack} }} {{damage1=D: @{npcattack6damage} }} {{critconfirm1=Crit?: @{npcattack6critatk} }} {{critdmg1= @{npcattack6critdam} }} {{notes=@{npcattack6note} }}</textarea>
-											<button type="roll" style="vertical-align:top;" name="roll_npcattack6" title="npcattack6macro" value="@{npcattack6macro}"></button></td>
-										</tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack6attack"  title="npcattack6attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack6damage"  title="npcattack6damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack6critatk" title="npcattack6critatk" value="@{npcattack6attack}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack6critdam" title="npcattack6critdam" value="@{npcattack6damage}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack6note"    title="npcattack6note"                                     ></td></tr>
-									</table>
-								</div>
-							</td>
-						</tr>
-						<!--Attack 7-->
-						<tr>
-							<td style="text-align: left;">
-								<input type="checkbox" class="sheet-pc-weapon7-show sheet-arrow" title="weapon7-show" name="attr_weapon7-show" value="0"         /><span style="text-align: left;">Attack 7</span>
-								<div class="sheet-pc-weapon7">
-									<table>
-										<tr>
-											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack7type"    title="npcattack7type"    value="7"                        ></td>
-											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack7macro" name="attr_npcattack7macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack7attack} }}  {{attack1=@{npcattack7type}: @{npcattack7attack} }} {{damage1=D: @{npcattack7damage} }} {{critconfirm1=Crit?: @{npcattack7critatk} }} {{critdmg1= @{npcattack7critdam} }} {{notes=@{npcattack7note} }}</textarea>
-											<button type="roll" style="vertical-align:top;" name="roll_npcattack7" title="npcattack7macro" value="@{npcattack7macro}"></button></td>
-										</tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack7attack"  title="npcattack7attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack7damage"  title="npcattack7damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack7critatk" title="npcattack7critatk" value="@{npcattack7attack}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack7critdam" title="npcattack7critdam" value="@{npcattack7damage}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack7note"    title="npcattack7note"                                     ></td></tr>
-									</table>
-								</div>
-							</td>
-						</tr>
-						<!--Attack 8-->
-						<tr>
-							<td style="text-align: left;">
-								<input type="checkbox" class="sheet-pc-weapon8-show sheet-arrow" title="weapon8-show" name="attr_weapon8-show" value="0"         /><span style="text-align: left;">Attack 8</span>
-								<div class="sheet-pc-weapon8">
-									<table>
-										<tr>
-											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack8type"    title="npcattack8type"    value="8"                        ></td>
-											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack8macro" name="attr_npcattack8macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack8attack} }}  {{attack1=@{npcattack8type}: @{npcattack8attack} }} {{damage1=D: @{npcattack8damage} }} {{critconfirm1=Crit?: @{npcattack8critatk} }} {{critdmg1= @{npcattack8critdam} }} {{notes=@{npcattack8note} }}</textarea>
-											<button type="roll" style="vertical-align:top;" name="roll_npcattack8" title="npcattack8macro" value="@{npcattack8macro}"></button></td>
-										</tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack8attack"  title="npcattack8attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack8damage"  title="npcattack8damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack8critatk" title="npcattack8critatk" value="@{npcattack8attack}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack8critdam" title="npcattack8critdam" value="@{npcattack8damage}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack8note"    title="npcattack8note"                                     ></td></tr>
-									</table>
-								</div>
-							</td>
-						</tr>
-						<!--Attack 9-->
-						<tr>
-							<td style="text-align: left;">
-								<input type="checkbox" class="sheet-pc-weapon9-show sheet-arrow" title="weapon9-show" name="attr_weapon9-show" value="0"         /><span style="text-align: left;">Attack 9</span>
-								<div class="sheet-pc-weapon9">
-									<table>
-										<tr>
-											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack9type"    title="npcattack9type"    value="9"                        ></td>
-											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack9macro" name="attr_npcattack9macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack9attack} }}  {{attack1=@{npcattack9type}: @{npcattack9attack} }} {{damage1=D: @{npcattack9damage} }} {{critconfirm1=Crit?: @{npcattack9critatk} }} {{critdmg1= @{npcattack9critdam} }} {{notes=@{npcattack9note} }}</textarea>
-											<button type="roll" style="vertical-align:top;" name="roll_npcattack9" title="npcattack9macro" value="@{npcattack9macro}"></button></td>
-										</tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack9attack"  title="npcattack9attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack9damage"  title="npcattack9damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack9critatk" title="npcattack9critatk" value="@{npcattack9attack}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack9critdam" title="npcattack9critdam" value="@{npcattack9damage}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack9note"    title="npcattack9note"                                     ></td></tr>
-									</table>
-								</div>
-							</td>
-						</tr>
-						<!--Attack 10-->
-						<tr>
-							<td style="text-align: left;">
-								<input type="checkbox" class="sheet-pc-weapon10-show sheet-arrow" title="weapon10-show" name="attr_weapon10-show" value="0"         /><span style="text-align: left;">Attack 10</span>
-								<div class="sheet-pc-weapon10">
-									<table>
-										<tr>
-											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack10type"    title="npcattack10type"    value="10"                        ></td>
-											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack10macro" name="attr_npcattack10macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack10attack} }}  {{attack1=@{npcattack10type}: @{npcattack10attack} }} {{damage1=D: @{npcattack10damage} }} {{critconfirm1=Crit?: @{npcattack10critatk} }} {{critdmg1= @{npcattack10critdam} }} {{notes=@{npcattack10note} }}</textarea>
-											<button type="roll" style="vertical-align:top;" name="roll_npcattack10" title="npcattack10macro" value="@{npcattack10macro}"></button></td>
-										</tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack10attack"  title="npcattack10attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack10damage"  title="npcattack10damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack10critatk" title="npcattack10critatk" value="@{npcattack10attack}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack10critdam" title="npcattack10critdam" value="@{npcattack10damage}"      ></td></tr>
-										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack10note"    title="npcattack10note"                                      ></td></tr>
-									</table>
-								</div>
-							</td>
-						</tr>
-
-
-					</table>
-				</div>
-			</td>
-		</tr>
-		<tr>
 			<td class="sheet-table-header-right"><span data-i18n="space">Space</span>/<span data-i18n="reach">Reach</span>:</td>
 			<td class="sheet-table-left"><input style="width: 140px;" type="text" name="attr_npcspace" title="npcspace" placeholder="Space" data-i18n-placeholder="space">/<input style="width: 140px;" type="text" name="attr_npcreach" title="npcreach" placeholder="Reach" data-i18n-placeholder="reach"> &nbsp; &nbsp;</td>
 		</tr>
@@ -3948,6 +3737,264 @@
 		<tr>
 			<td class="sheet-table-header-right"><span data-i18n="feats">Feats</span>:</td>
 			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcfeats" title="npcfeats" placeholder="Feats" data-i18n-placeholder="feats"></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<hr/>
+			</td>
+		</tr>
+		<!--Attacks-->
+		<tr>
+			<td colspan="2" class="sheet-table-left">
+				<input type="checkbox" class="sheet-npc-weapons-show sheet-arrow" title="npc-weapons-show" name="attr_npc-weapons-show" value="0" /><span style="text-align: left;">Attack Helpers</span>
+				<div class="sheet-npc-weapons">
+					<table>
+						<!--Attack 1-->
+						<tr>
+							<td style="text-align: left;">
+								<input type="checkbox" class="sheet-npc-weapon1-show sheet-arrow" title="npc-weapon1-show" name="attr_npc-weapon1-show" value="0"         /><span style="text-align: left;">Attack 1</span>
+								<div class="sheet-npc-weapon1">
+									<table>
+										<tr>
+											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack1type"    title="npcattack1type"    value="1"                        ></td>
+											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack1macro" name="attr_npcattack1macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack1attack} }}  {{attack1=@{npcattack1type}: @{npcattack1attack} }} {{damage1=D: @{npcattack1damage} }} {{critconfirm1=Crit?: @{npcattack1critatk} }} {{critdmg1= @{npcattack1critdam} }} {{notes=@{npcattack1note} }}</textarea>
+											<button type="roll" style="vertical-align:top;" name="roll_npcattack1" title="npcattack1macro" value="@{npcattack1macro}"></button></td>
+										</tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack1attack"  title="npcattack1attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack1damage"  title="npcattack1damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack1critatk" title="npcattack1critatk" value="@{npcattack1attack}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack1critdam" title="npcattack1critdam" value="@{npcattack1damage}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack1note"    title="npcattack1note"                                     ></td></tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!--Attack 2-->
+						<tr>
+							<td style="text-align: left;">
+								<input type="checkbox" class="sheet-npc-weapon2-show sheet-arrow" title="npc-weapon2-show" name="attr_npc-weapon2-show" value="0"         /><span style="text-align: left;">Attack 2</span>
+								<div class="sheet-npc-weapon2">
+									<table>
+										<tr>
+											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack2type"    title="npcattack2type"    value="2"                        ></td>
+											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack2macro" name="attr_npcattack2macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack2attack} }}  {{attack1=@{npcattack2type}: @{npcattack2attack} }} {{damage1=D: @{npcattack2damage} }} {{critconfirm1=Crit?: @{npcattack2critatk} }} {{critdmg1= @{npcattack2critdam} }} {{notes=@{npcattack2note} }}</textarea>
+											<button type="roll" style="vertical-align:top;" name="roll_npcattack2" title="npcattack2macro" value="@{npcattack2macro}"></button></td>
+										</tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack2attack"  title="npcattack2attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack2damage"  title="npcattack2damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack2critatk" title="npcattack2critatk" value="@{npcattack2attack}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack2critdam" title="npcattack2critdam" value="@{npcattack2damage}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack2note"    title="npcattack2note"                                     ></td></tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!--Attack 3-->
+						<tr>
+							<td style="text-align: left;">
+								<input type="checkbox" class="sheet-npc-weapon3-show sheet-arrow" title="npc-weapon3-show" name="attr_npc-weapon3-show" value="0"         /><span style="text-align: left;">Attack 3</span>
+								<div class="sheet-npc-weapon3">
+									<table>
+										<tr>
+											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack3type"    title="npcattack3type"    value="3"                        ></td>
+											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack3macro" name="attr_npcattack3macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack3attack} }}  {{attack1=@{npcattack3type}: @{npcattack3attack} }} {{damage1=D: @{npcattack3damage} }} {{critconfirm1=Crit?: @{npcattack3critatk} }} {{critdmg1= @{npcattack3critdam} }} {{notes=@{npcattack3note} }}</textarea>
+											<button type="roll" style="vertical-align:top;" name="roll_npcattack3" title="npcattack3macro" value="@{npcattack3macro}"></button></td>
+										</tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack3attack"  title="npcattack3attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack3damage"  title="npcattack3damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack3critatk" title="npcattack3critatk" value="@{npcattack3attack}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack3critdam" title="npcattack3critdam" value="@{npcattack3damage}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack3note"    title="npcattack3note"                                     ></td></tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!--Attack 4-->
+						<tr>
+							<td style="text-align: left;">
+								<input type="checkbox" class="sheet-npc-weapon4-show sheet-arrow" title="npc-weapon4-show" name="attr_npc-weapon4-show" value="0"         /><span style="text-align: left;">Attack 4</span>
+								<div class="sheet-npc-weapon4">
+									<table>
+										<tr>
+											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack4type"    title="npcattack4type"    value="4"                        ></td>
+											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack4macro" name="attr_npcattack4macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack4attack} }}  {{attack1=@{npcattack4type}: @{npcattack4attack} }} {{damage1=D: @{npcattack4damage} }} {{critconfirm1=Crit?: @{npcattack4critatk} }} {{critdmg1= @{npcattack4critdam} }} {{notes=@{npcattack4note} }}</textarea>
+											<button type="roll" style="vertical-align:top;" name="roll_npcattack4" title="npcattack4macro" value="@{npcattack4macro}"></button></td>
+										</tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack4attack"  title="npcattack4attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack4damage"  title="npcattack4damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack4critatk" title="npcattack4critatk" value="@{npcattack4attack}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack4critdam" title="npcattack4critdam" value="@{npcattack4damage}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack4note"    title="npcattack4note"                                     ></td></tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!--Attack 5-->
+						<tr>
+							<td style="text-align: left;">
+								<input type="checkbox" class="sheet-npc-weapon5-show sheet-arrow" title="npc-weapon5-show" name="attr_npc-weapon5-show" value="0"         /><span style="text-align: left;">Attack 5</span>
+								<div class="sheet-npc-weapon5">
+									<table>
+										<tr>
+											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack5type"    title="npcattack5type"    value="5"                        ></td>
+											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack5macro" name="attr_npcattack5macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack5attack} }}  {{attack1=@{npcattack5type}: @{npcattack5attack} }} {{damage1=D: @{npcattack5damage} }} {{critconfirm1=Crit?: @{npcattack5critatk} }} {{critdmg1= @{npcattack5critdam} }} {{notes=@{npcattack5note} }}</textarea>
+											<button type="roll" style="vertical-align:top;" name="roll_npcattack5" title="npcattack5macro" value="@{npcattack5macro}"></button></td>
+										</tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack5attack"  title="npcattack5attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack5damage"  title="npcattack5damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack5critatk" title="npcattack5critatk" value="@{npcattack5attack}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack5critdam" title="npcattack5critdam" value="@{npcattack5damage}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack5note"    title="npcattack5note"                                     ></td></tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!--Attack 6-->
+						<tr>
+							<td style="text-align: left;">
+								<input type="checkbox" class="sheet-npc-weapon6-show sheet-arrow" title="npc-weapon6-show" name="attr_npc-weapon6-show" value="0"         /><span style="text-align: left;">Attack 6</span>
+								<div class="sheet-npc-weapon6">
+									<table>
+										<tr>
+											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack6type"    title="npcattack6type"    value="6"                        ></td>
+											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack6macro" name="attr_npcattack6macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack6attack} }}  {{attack1=@{npcattack6type}: @{npcattack6attack} }} {{damage1=D: @{npcattack6damage} }} {{critconfirm1=Crit?: @{npcattack6critatk} }} {{critdmg1= @{npcattack6critdam} }} {{notes=@{npcattack6note} }}</textarea>
+											<button type="roll" style="vertical-align:top;" name="roll_npcattack6" title="npcattack6macro" value="@{npcattack6macro}"></button></td>
+										</tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack6attack"  title="npcattack6attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack6damage"  title="npcattack6damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack6critatk" title="npcattack6critatk" value="@{npcattack6attack}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack6critdam" title="npcattack6critdam" value="@{npcattack6damage}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack6note"    title="npcattack6note"                                     ></td></tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!--Attack 7-->
+						<tr>
+							<td style="text-align: left;">
+								<input type="checkbox" class="sheet-npc-weapon7-show sheet-arrow" title="npc-weapon7-show" name="attr_npc-weapon7-show" value="0"         /><span style="text-align: left;">Attack 7</span>
+								<div class="sheet-npc-weapon7">
+									<table>
+										<tr>
+											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack7type"    title="npcattack7type"    value="7"                        ></td>
+											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack7macro" name="attr_npcattack7macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack7attack} }}  {{attack1=@{npcattack7type}: @{npcattack7attack} }} {{damage1=D: @{npcattack7damage} }} {{critconfirm1=Crit?: @{npcattack7critatk} }} {{critdmg1= @{npcattack7critdam} }} {{notes=@{npcattack7note} }}</textarea>
+											<button type="roll" style="vertical-align:top;" name="roll_npcattack7" title="npcattack7macro" value="@{npcattack7macro}"></button></td>
+										</tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack7attack"  title="npcattack7attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack7damage"  title="npcattack7damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack7critatk" title="npcattack7critatk" value="@{npcattack7attack}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack7critdam" title="npcattack7critdam" value="@{npcattack7damage}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack7note"    title="npcattack7note"                                     ></td></tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!--Attack 8-->
+						<tr>
+							<td style="text-align: left;">
+								<input type="checkbox" class="sheet-npc-weapon8-show sheet-arrow" title="npc-weapon8-show" name="attr_npc-weapon8-show" value="0"         /><span style="text-align: left;">Attack 8</span>
+								<div class="sheet-npc-weapon8">
+									<table>
+										<tr>
+											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack8type"    title="npcattack8type"    value="8"                        ></td>
+											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack8macro" name="attr_npcattack8macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack8attack} }}  {{attack1=@{npcattack8type}: @{npcattack8attack} }} {{damage1=D: @{npcattack8damage} }} {{critconfirm1=Crit?: @{npcattack8critatk} }} {{critdmg1= @{npcattack8critdam} }} {{notes=@{npcattack8note} }}</textarea>
+											<button type="roll" style="vertical-align:top;" name="roll_npcattack8" title="npcattack8macro" value="@{npcattack8macro}"></button></td>
+										</tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack8attack"  title="npcattack8attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack8damage"  title="npcattack8damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack8critatk" title="npcattack8critatk" value="@{npcattack8attack}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack8critdam" title="npcattack8critdam" value="@{npcattack8damage}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack8note"    title="npcattack8note"                                     ></td></tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!--Attack 9-->
+						<tr>
+							<td style="text-align: left;">
+								<input type="checkbox" class="sheet-npc-weapon9-show sheet-arrow" title="npc-weapon9-show" name="attr_npc-weapon9-show" value="0"         /><span style="text-align: left;">Attack 9</span>
+								<div class="sheet-npc-weapon9">
+									<table>
+										<tr>
+											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack9type"    title="npcattack9type"    value="9"                        ></td>
+											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack9macro" name="attr_npcattack9macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack9attack} }}  {{attack1=@{npcattack9type}: @{npcattack9attack} }} {{damage1=D: @{npcattack9damage} }} {{critconfirm1=Crit?: @{npcattack9critatk} }} {{critdmg1= @{npcattack9critdam} }} {{notes=@{npcattack9note} }}</textarea>
+											<button type="roll" style="vertical-align:top;" name="roll_npcattack9" title="npcattack9macro" value="@{npcattack9macro}"></button></td>
+										</tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack9attack"  title="npcattack9attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack9damage"  title="npcattack9damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack9critatk" title="npcattack9critatk" value="@{npcattack9attack}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack9critdam" title="npcattack9critdam" value="@{npcattack9damage}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack9note"    title="npcattack9note"                                     ></td></tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<!--Attack 10-->
+						<tr>
+							<td style="text-align: left;">
+								<input type="checkbox" class="sheet-npc-weapon0-show sheet-arrow" title="npc-weapon0-show" name="attr_npc-weapon0-show" value="0"         /><span style="text-align: left;">Attack 10</span>
+								<div class="sheet-npc-weapon0">
+									<table>
+										<tr>
+											<td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Type </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack10type"    title="npcattack10type"    value="10"                        ></td>
+											<td rowspan="6"><textarea style="width: 350px; height: 150px;" title="npcattack10macro" name="attr_npcattack10macro">&{template:DnD35Attack} {{name=@{selected|token_name} }} {{npcflag=true}} {{subtags=attacks @{target|token_name} }} {{fullattackflag= [[0d1]] }} {{fumbleroll= Fumble: @{npcattack10attack} }}  {{attack1=@{npcattack10type}: @{npcattack10attack} }} {{damage1=D: @{npcattack10damage} }} {{critconfirm1=Crit?: @{npcattack10critatk} }} {{critdmg1= @{npcattack10critdam} }} {{notes=@{npcattack10note} }}</textarea>
+											<button type="roll" style="vertical-align:top;" name="roll_npcattack10" title="npcattack10macro" value="@{npcattack10macro}"></button></td>
+										</tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Attack Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack10attack"  title="npcattack10attack"  value="[[ 1d20cs>20 +@{bab} [BAB] +@{str-mod} [STR] +@{size} [Size] +?{Bonus to Attack?|0} [Misc] ]]"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Damage Roll </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack10damage"  title="npcattack10damage"  value="[[ 1d4 +@{str-mod} [STR] +?{Bonus to Damage?|0} [Misc] ]] dmg"></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Atk</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack10critatk" title="npcattack10critatk" value="@{npcattack10attack}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Critical Dam</span></td><td><input style="width: 295px;" type="text" name="attr_npcattack10critdam" title="npcattack10critdam" value="@{npcattack10damage}"      ></td></tr>
+										<tr><td class="sheet-table-left"><span class="sheet-table-header" style="width: 100px; text-align: right;">Note        </span></td><td><input style="width: 295px;" type="text" name="attr_npcattack10note"    title="npcattack10note"                                      ></td></tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<hr/>
+			</td>
+		</tr>
+		<!--Spells-->
+		<tr>
+			<td colspan="2" class="sheet-table-left">
+				<input type="checkbox" class="sheet-npc-spells-show sheet-arrow" title="npc-spells-show" name="attr_npc-spells-show" value="0" />
+				<span style="text-align: left;">Spell Helpers</span>
+				<div class="sheet-npc-spells">
+					<table>
+						<tr>
+							<td class="sheet-table-left">
+								<span data-i18n="caster-level">Caster Level</span>:&nbsp;
+								<input class="sheet-table-row-small" style="width: 25px;" type="number" name="attr_casterlevel" title="casterlevel" value="0" >&nbsp;&nbsp;
+								<span data-i18n="casting-ability">Casting Ability</span>:&nbsp;
+								<select class="sheet-table-data-center" style="height: 24px; width: 64px;" name="attr_spellcastingstat" title="spellcastingstat">
+									<option type="text" style="width: 45px;" value="@{str-mod} " data-i18n="strength-a"             >Str</option>
+									<option type="text" style="width: 45px;" value="@{dex-mod} " data-i18n="dexterity-a"            >Dex</option>
+									<option type="text" style="width: 45px;" value="@{con-mod} " data-i18n="constitution-a"         >Con</option>
+									<option type="text" style="width: 45px;" value="@{int-mod} " data-i18n="intelligence-a" selected>Int</option>
+									<option type="text" style="width: 45px;" value="@{wis-mod} " data-i18n="wisdom-a"               >Wis</option>
+									<option type="text" style="width: 45px;" value="@{cha-mod} " data-i18n="charisma-a"             >Cha</option>
+								</select>
+								<!--  -->
+							</td>
+						</tr>
+						<tr><td class="sheet-table-center"><span data-i18n="concentration">Concentration</span></td></tr>
+						<tr>
+							<td class="sheet-table-left">
+								<input type="text" name="attr_concentration"        title="concentration"        value="(@{con-mod} +@{concentrationranks} +@{concentrationmiscmod} )" disabled> =
+								<input type="text" name="attr_conmod"               title="conmod"               value="@{con-mod}"                                                    disabled> +
+								<input type="text" name="attr_concentrationranks"   title="concentrationranks"   value="0"                                                                     > +
+								<input type="text" name="attr_concentrationmiscmod" title="concentrationmiscmod" value="0"                                                                     >
+							</td>
+						</tr>
+								<!-- Save DCs, spellpen, spelldc0-9, sf-conjuration, melee/ranged attack -->
+
+					</table>
+				</div>
+			</td>
 		</tr>
 		<tr>
 			<td colspan="2">
