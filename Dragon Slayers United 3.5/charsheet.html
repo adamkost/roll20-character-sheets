@@ -3743,6 +3743,58 @@
 				<hr/>
 			</td>
 		</tr>
+		<tr>
+			<td class="sheet-table-header-right"><span data-i18n="environment">Environment</span>:</td>
+			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcenv" title="npcenv" placeholder="Environment" data-i18n-placeholder="environment"></td>
+		</tr>
+		<tr>
+			<td class="sheet-table-header-right"><span data-i18n="organization">Organization</span>:</td>
+			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcorg" title="npcorg" placeholder="Organization" data-i18n-placeholder="organization"></td>
+		</tr>
+		<tr>
+			<td class="sheet-table-header-right"><span data-i18n="challenge-rating">Challenge Rating</span>:</td>
+			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npccr" title="npccr" placeholder="CR" data-i18n-placeholder="challenge-rating-i"></td>
+		</tr>
+		<tr>
+			<td class="sheet-table-header-right"><span data-i18n="treasure">Treasure</span>:</td>
+			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npctreasure" title="npctreasure" placeholder="Treasure" data-i18n-placeholder="treasure"> &nbsp; &nbsp; </td>
+		</tr>
+		<tr>
+			<td class="sheet-table-header-right"><span data-i18n="alignment">Alignment</span>:</td>
+			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcalignment" title="npcalignment" placeholder="Alignment" data-i18n-placeholder="alignment"></td>
+		</tr>
+		<tr>
+			<td class="sheet-table-header-right"><span data-i18n="advancement">Advancement</span>:</td>
+			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcadv" title="npcadv" placeholder="Advancement" data-i18n-placeholder="advancement"></td>
+		</tr>
+		<tr>
+			<td class="sheet-table-header-right"><span data-i18n="level-adjustment">Level Adjustment</span>:</td>
+			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npclvladj" title="npclvladj" placeholder="-"></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<hr/>
+			</td>
+		</tr>
+		<tr>
+			<td class="sheet-table-left" colspan="2"><textarea input class="sheet-inputbox" rows="4" cols="55" style="height: 60px; width: 790px;" name="attr_npcdescr" title="npcdescr" placeholder="Description etc" data-i18n-placeholder="description-etc"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<hr/>
+			</td>
+		</tr>
+		<tr>
+			<td class="sheet-table-header-left" colspan="2"><span data-i18n="combat-u">COMBAT</span></td>
+		</tr>
+		<tr>
+			<td class="sheet-table-left" colspan="2"><textarea input class="sheet-inputbox" rows="8" cols="55" style="height: 60px; width: 790px;" name="attr_npccombatdescr" title="npccombatdescr" placeholder="Combat information" data-i18n-placeholder="combat-information"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<hr/>
+			</td>
+		</tr>
 		<!--Attacks-->
 		<tr>
 			<td colspan="2" class="sheet-table-left">
@@ -4000,49 +4052,6 @@
 			<td colspan="2">
 				<hr/>
 			</td>
-		</tr>
-		<tr>
-			<td class="sheet-table-header-right"><span data-i18n="environment">Environment</span>:</td>
-			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcenv" title="npcenv" placeholder="Environment" data-i18n-placeholder="environment"></td>
-		</tr>
-		<tr>
-			<td class="sheet-table-header-right"><span data-i18n="organization">Organization</span>:</td>
-			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcorg" title="npcorg" placeholder="Organization" data-i18n-placeholder="organization"></td>
-		</tr>
-		<tr>
-			<td class="sheet-table-header-right"><span data-i18n="challenge-rating">Challenge Rating</span>:</td>
-			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npccr" title="npccr" placeholder="CR" data-i18n-placeholder="challenge-rating-i"></td>
-		</tr>
-		<tr>
-			<td class="sheet-table-header-right"><span data-i18n="treasure">Treasure</span>:</td>
-			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npctreasure" title="npctreasure" placeholder="Treasure" data-i18n-placeholder="treasure"> &nbsp; &nbsp; </td>
-		</tr>
-		<tr>
-			<td class="sheet-table-header-right"><span data-i18n="alignment">Alignment</span>:</td>
-			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcalignment" title="npcalignment" placeholder="Alignment" data-i18n-placeholder="alignment"></td>
-		</tr>
-		<tr>
-			<td class="sheet-table-header-right"><span data-i18n="advancement">Advancement</span>:</td>
-			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcadv" title="npcadv" placeholder="Advancement" data-i18n-placeholder="advancement"></td>
-		</tr>
-		<tr>
-			<td class="sheet-table-header-right"><span data-i18n="level-adjustment">Level Adjustment</span>:</td>
-			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npclvladj" title="npclvladj" placeholder="-"></td>
-		</tr>
-		<tr>
-			<td> </td>
-		</tr>
-		<tr>
-			<td class="sheet-table-left" colspan="2"><textarea input class="sheet-inputbox" rows="4" cols="55" style="height: 60px; width: 790px;" name="attr_npcdescr" title="npcdescr" placeholder="Description etc" data-i18n-placeholder="description-etc"></textarea></td>
-		</tr>
-		<tr>
-			<td> </td>
-		</tr>
-		<tr>
-			<td class="sheet-table-header-left" colspan="2"><span data-i18n="combat-u">COMBAT</span></td>
-		</tr>
-		<tr>
-			<td class="sheet-table-left" colspan="2"><textarea input class="sheet-inputbox" rows="8" cols="55" style="height: 60px; width: 790px;" name="attr_npccombatdescr" title="npccombatdescr" placeholder="Combat information" data-i18n-placeholder="combat-information"></textarea></td>
 		</tr>
 	</table>
 
