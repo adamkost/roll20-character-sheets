@@ -70,29 +70,33 @@
 .sheet-pc-rolltemplates-show:not(:checked)~.sheet-pc-rolltemplates {display:none;}
 
 
-.sheet-npc-weapons-show:not(:checked)~.sheet-npc-weapons {display:none;}
-.sheet-npc-weapon1-show:not(:checked)~.sheet-npc-weapon1 {display:none;}
-.sheet-npc-weapon2-show:not(:checked)~.sheet-npc-weapon2 {display:none;}
-.sheet-npc-weapon3-show:not(:checked)~.sheet-npc-weapon3 {display:none;}
-.sheet-npc-weapon4-show:not(:checked)~.sheet-npc-weapon4 {display:none;}
-.sheet-npc-weapon5-show:not(:checked)~.sheet-npc-weapon5 {display:none;}
-.sheet-npc-weapon6-show:not(:checked)~.sheet-npc-weapon6 {display:none;}
-.sheet-npc-weapon7-show:not(:checked)~.sheet-npc-weapon7 {display:none;}
-.sheet-npc-weapon8-show:not(:checked)~.sheet-npc-weapon8 {display:none;}
-.sheet-npc-weapon9-show:not(:checked)~.sheet-npc-weapon9 {display:none;}
-.sheet-npc-weapon0-show:not(:checked)~.sheet-npc-weapon0 {display:none;}
+.sheet-npc-helpers-show:not(:checked)~.sheet-npc-helpers             {display:none;}
+.sheet-npc-abilitymacros-show:not(:checked)~.sheet-npc-abilitymacros {display:none;}
+.sheet-npc-init-show:not(:checked)~.sheet-npc-init                   {display:none;}
 
-.sheet-npc-spells-show:not(:checked)~.sheet-npc-spells {display:none;}
-.sheet-pc-spells0-show:not(:checked)~.sheet-pc-spells0 {display:none;}
-.sheet-pc-spells1-show:not(:checked)~.sheet-pc-spells1 {display:none;}
-.sheet-pc-spells2-show:not(:checked)~.sheet-pc-spells2 {display:none;}
-.sheet-pc-spells3-show:not(:checked)~.sheet-pc-spells3 {display:none;}
-.sheet-pc-spells4-show:not(:checked)~.sheet-pc-spells4 {display:none;}
-.sheet-pc-spells5-show:not(:checked)~.sheet-pc-spells5 {display:none;}
-.sheet-pc-spells6-show:not(:checked)~.sheet-pc-spells6 {display:none;}
-.sheet-pc-spells7-show:not(:checked)~.sheet-pc-spells7 {display:none;}
-.sheet-pc-spells8-show:not(:checked)~.sheet-pc-spells8 {display:none;}
-.sheet-pc-spells9-show:not(:checked)~.sheet-pc-spells9 {display:none;}
+.sheet-npc-weapons-show:not(:checked)~.sheet-npc-weapons             {display:none;}
+.sheet-npc-weapon1-show:not(:checked)~.sheet-npc-weapon1             {display:none;}
+.sheet-npc-weapon2-show:not(:checked)~.sheet-npc-weapon2             {display:none;}
+.sheet-npc-weapon3-show:not(:checked)~.sheet-npc-weapon3             {display:none;}
+.sheet-npc-weapon4-show:not(:checked)~.sheet-npc-weapon4             {display:none;}
+.sheet-npc-weapon5-show:not(:checked)~.sheet-npc-weapon5             {display:none;}
+.sheet-npc-weapon6-show:not(:checked)~.sheet-npc-weapon6             {display:none;}
+.sheet-npc-weapon7-show:not(:checked)~.sheet-npc-weapon7             {display:none;}
+.sheet-npc-weapon8-show:not(:checked)~.sheet-npc-weapon8             {display:none;}
+.sheet-npc-weapon9-show:not(:checked)~.sheet-npc-weapon9             {display:none;}
+.sheet-npc-weapon0-show:not(:checked)~.sheet-npc-weapon0             {display:none;}
+
+.sheet-npc-spells-show:not(:checked)~.sheet-npc-spells               {display:none;}
+.sheet-pc-spells0-show:not(:checked)~.sheet-pc-spells0               {display:none;}
+.sheet-pc-spells1-show:not(:checked)~.sheet-pc-spells1               {display:none;}
+.sheet-pc-spells2-show:not(:checked)~.sheet-pc-spells2               {display:none;}
+.sheet-pc-spells3-show:not(:checked)~.sheet-pc-spells3               {display:none;}
+.sheet-pc-spells4-show:not(:checked)~.sheet-pc-spells4               {display:none;}
+.sheet-pc-spells5-show:not(:checked)~.sheet-pc-spells5               {display:none;}
+.sheet-pc-spells6-show:not(:checked)~.sheet-pc-spells6               {display:none;}
+.sheet-pc-spells7-show:not(:checked)~.sheet-pc-spells7               {display:none;}
+.sheet-pc-spells8-show:not(:checked)~.sheet-pc-spells8               {display:none;}
+.sheet-pc-spells9-show:not(:checked)~.sheet-pc-spells9               {display:none;}
 
 table .sheet-npc-deprecated {
 	border-style: dotted;
