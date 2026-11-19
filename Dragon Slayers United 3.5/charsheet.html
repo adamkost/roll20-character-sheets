@@ -4,6 +4,7 @@
 <!-- with lots of help from Toby-->
 <!-- Version 2.7.8 1/7/19 (Fix roll buttons)-->
 <!-- Version 2.7.9 12/7/20 (change repeating_spells to spells11)-->
+<!-- Version 2.7.9.1 11/18/2026 (Rename Hit Points Label to Vitality, Add Wounds, Willpower-->
 <input type="hidden" name="attr_currentsheetversion" title="currentsheetversion" value="8.0"/>
 <input type="hidden" name="attr_code_version" title="code_version" value="0"/>
 <input type="radio" class="sheet-switch-pc-show sheet-switch" title="npc-show" name="attr_npc-show" value="1" checked /><span style="text-align: left;" data-i18n="pc" >PC </span><span> &nbsp; &nbsp; &nbsp; &nbsp;</span>
@@ -210,10 +211,24 @@
 								<td>
 									<table>
 										<tr>
-											<td class="sheet-statlabel-big" style="width: 70px;"><span data-i18n="hit-points-i">HP</span><br><div style="font-size: 0.65em;" data-i18n="hit-points">Hit Points</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_hitpoints" title="hitpoints" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;" data-i18n="current-hit-points">Current HP</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_hitpoints_max" title="hitpoints_max; use hitpoints|max in macros" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;" data-i18n="max">Max</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_nonlethaldamage" title="nonlethaldamage" style="height: 24px; width: 140px; text-align: center;"><br><div style="font-size: 0.5em;" data-i18n="nonlethal-damage">Nonlethal Damage</div></td>
+											<td rowspan="4" class="sheet-statlabel-big" style="width: 70px;"><span data-i18n="hit-points-i">Injuries</span><!--<br><div style="font-size: 0.65em;" data-i18n="injuries-i">Injuries</div>--></td>
+  										</tr>
+										<tr>
+											<td><input class="sheet-inputbox" type="text" name="attr_hitpoints"       title="hitpoints"                                  style="height: 24px; width: 100px; text-align: center;"><br><div style="font-size: 0.5em;" data-i18n="current-hit-points">Current Vitality</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_hitpoints_max"   title="hitpoints_max; use hitpoints|max in macros" style="height: 24px; width: 100px; text-align: center;"><br><div style="font-size: 0.5em;" data-i18n="max"               >Max             </div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_nonlethaldamage" title="nonlethaldamage"                            style="height: 24px; width: 100px; text-align: center;"><br><div style="font-size: 0.5em;" data-i18n="nonlethal-damage"  >Nonlethal Damage</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_viledamage"      title="viledamage"                                 style="height: 24px; width: 100px; text-align: center;"><br><div style="font-size: 0.5em;" data-i18n="vile-damage"       >Vile Damage     </div></td>
+										</tr>
+										<tr>
+											<td class="sheet-statlabel-big" style="width: 70px;"><span data-i18n="wounds-i">Wounds</span><!--<br><div style="font-size: 0.65em;" data-i18n="wounds">Wounds</div>--></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_wounds"     title="wounds"                               style="height: 24px; width: 117px; text-align: center;"                ><br><div style="font-size: 0.5em;" data-i18n="current-wounds">Wounds</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_wounds_max" title="wounds_max; use wounds|max in macros" style="height: 24px; width: 117px; text-align: center;" value="@{con}" ><br><div style="font-size: 0.5em;" data-i18n="max">Max</div></td>
+										</tr>
+										<tr>
+											<td class="sheet-statlabel-big" style="width: 70px;"><span data-i18n="willpower-i">Willpower</span><br><div style="font-size: 0.65em;" data-i18n="willpower">Willpower</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_willpower"     title="willpower" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;" data-i18n="current-willpower">Temp</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_willpower_max" title="willpower_max; use willpower|max in macros" style="height: 24px; width: 117px; text-align: center;" value="@{wis_mod} + @{total_hd}"><br><div style="font-size: 0.5em;" data-i18n="max">Max</div></td>
+<!--										<td><input class="sheet-inputbox" type="text" name="attr_willpower_max" title="willpower_max; use willpower|max in macros" style="height: 24px; width: 117px; text-align: center;" value="@{con}" ><br><div style="font-size: 0.5em;" data-i18n="max">Max</div></td>-->
 										</tr>
 										<tr>
 											<td class="sheet-statlabel-big" style="width: 70px;" data-i18n="initiative-u">INITIATIVE</td>
@@ -5696,6 +5711,35 @@ on("change:cha", function() {
 	});
   });
 });
+
+/*
+on("change:str-base change:dex-base change:con-base change:int-base change:wis-base change:cha-base", function(){
+  getAttrs([ "str-base", "dex-base", "con-base", "int-base", "wis-base", "cha-base", "total-points"], function(values){
+    setAttrs({
+		"total-points": (
+			parseInt(values["str-base"],0) + parseInt(values["dex-base"],0) + parseInt(values["con-base"],0) + parseInt(values["int-base"],0) + parseInt(values["wis-base"],0) + parseInt(values["cha-base"],0)
+		)
+	});
+  });
+});
+
+function PointValue(score){
+	switch (score) {
+		case 9 : return 1 ; break;
+		case 10: return 2 ; break;
+		case 11: return 3 ; break;
+		case 12: return 4 ; break;
+		case 13: return 5 ; break;
+		case 14: return 6 ; break;
+		case 15: return 8 ; break;
+		case 16: return 10; break;
+		case 17: return 13; break;
+		case 18: return 16; break;
+		default: return 0 ; break;
+	}
+}
+
+*/
 
 //  <!---- Copy weight from total equipment weight to total carried weight if wanted ---->
 on("change:totalequipmentweight change:equipmentweightcopy", function() {

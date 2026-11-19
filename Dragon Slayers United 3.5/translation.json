@@ -1,7 +1,38 @@
 {
-	"bpc": "PC Builder",
+	"bpc": "Builder",
 	"pc": "PC ",
 	"npc": "NPC",
+
+	"strength-i": "STR",
+	"dexterity-i": "DEX",
+	"constitution-i": "CON",
+	"intelligence-i": "INT",
+	"wisdom-i": "WIS",
+	"charisma-i": "CHA",
+
+	"abilities": "Abilities",
+	"ability-scores": "Ability Scores",
+
+	"ability": "Ability",
+	"total": "Total",
+	"modifier": "Mod",
+	"base": "Base",
+	"racial": "Racial",
+	"asi": "ASI",
+	"inherent": "Inh.",
+	"enhancement": "Enh.",
+	"misc1": "Misc 1",
+	"misc2": "Misc 2",
+	"misc3": "Misc 3",
+	"damage": "Dam.",
+	"drain": "Drain",
+	"penalty": "Pen.",
+	"temp": "Temp",
+
+
+
+
+
 	"header": "Header",
 	"character-name": "Character Name",
 	"player-name": "Player Name",
@@ -39,26 +70,29 @@
 	"notes": "Notes",
 	"miscellaneous": "Misc",
 	"all": "All",
-	"abilities": "Abilities",
-	"ability-scores": "Ability Scores",
-	"ability": "Ability",
-	"total": "Total",
-	"modifier": "Mod",
-	"base": "Base",
 	"temporary": "Temp",
-	"strength-i": "STR",
 	"note": "Note",
-	"dexterity-i": "DEX",
-	"constitution-i": "CON",
-	"intelligence-i": "INT",
-	"wisdom-i": "WIS",
-	"charisma-i": "CHA",
 	"show-ability-macros": "Show Ability Macros",
-	"hit-points-i": "HP",
+
+	"injuries-i": null,
+	"hit-points-i": "Vitality",
+
 	"hit-points": "Hit Points",
-	"current-hit-points": "Current HP",
+	"current-hit-points": "Current Vitality",
 	"max": "Max",
 	"nonlethal-damage": "Nonlethal Damage",
+	"vile-damage": "Vile Damage",
+
+	"vitality-i": "Vitality",
+	"vitality": "Vitality",
+	"wounds-i": "Wounds",
+	"current-wounds": "Wounds",
+	"current-willpower-i": "Willpower",
+	"willpower": "Willpower",
+
+
+
+
 	"initiative-u": "INITIATIVE",
 	"dexterity-modifier": "Dex Mod",
 	"miscellaneous-modifier-a": "Misc Mod",

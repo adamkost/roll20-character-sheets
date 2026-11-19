@@ -1,6 +1,14 @@
 /* ----------------------- classes for area display toggles -----------------------*/
+.sheet-switch-bpc-show:not(:checked)~.sheet-switch-bpc {display:none;}
 .sheet-switch-pc-show:not(:checked)~.sheet-switch-pc {display:none;}
 .sheet-switch-npc-show:not(:checked)~.sheet-switch-npc {display:none;}
+
+.sheet-builder-charrpinfo-show:not(:checked)~.sheet-builder-charrpinfo {display:none;}
+.sheet-builder-statblock-show:not(:checked)~.sheet-builder-statblock {display:none;}
+
+
+
+
 
 .sheet-pc-spells-show:not(:checked)~.sheet-pc-spells {display:none;}
 .sheet-pc-charrpinfo-show:not(:checked)~.sheet-pc-charrpinfo {display:none;}
@@ -98,17 +106,13 @@
 .sheet-pc-spells8-show:not(:checked)~.sheet-pc-spells8               {display:none;}
 .sheet-pc-spells9-show:not(:checked)~.sheet-pc-spells9               {display:none;}
 
+.sheet-npc-deprecated-show:not(:checked)~table .sheet-npc-deprecated { display:none; }
+.sheet-npc-init-notes-show:not(:checked)~.sheet-npc-init-notes { display:none; }
+
 table .sheet-npc-deprecated {
 	border-style: dotted;
 	border-width: 1px;
 	background-color: lightgray;
-}
-.sheet-npc-deprecated-show:not(:checked)~table .sheet-npc-deprecated {
-	display:none;
-}
-
-.sheet-npc-init-notes-show:not(:checked)~.sheet-npc-init-notes {
-	display:none;
 }
 
 .sheet-deprecated {
